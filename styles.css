@@ -18,10 +18,10 @@ table, th, td {
     padding: 5px;
   }
   
-table tr:nth-child(odd) {
+table tr:nth-child(even) {
   background-color: #efefef;
 }
-table tr:nth-child(even) {
+table tr:nth-child(odd) {
   background-color: #ffffff;
 }
 table th {
@@ -31,3 +31,9 @@ table th {
 input {
     border: 1px solid black;
 }
+
+
+/* tfoot td{
+    I need this to toggle between #efefef and #ffffff
+    depending on number of employees
+} */
