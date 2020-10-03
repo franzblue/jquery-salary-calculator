@@ -1,8 +1,23 @@
 header {
-    background-color: gray;
+    background-color: #6b6b6b;
     text-align: center;
 }
-
-input {
-    margin: 5px;
+h1 {
+    color: #e5e5e5;
 }
+
+table, th, td {
+    text-align: left;
+    border: 1px solid black;
+  }
+  
+table tr:nth-child(odd) {
+  background-color: #efefef;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+table th {
+  background-color: #d2d2d2;
+}
+
