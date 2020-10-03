@@ -6,12 +6,12 @@ function onReady(){
     console.log('jquery good to go');
 
     // event listeners here!!!
-    $('#submitButton').on('click', buttonWorks);
+    $('#submitButton').on('click', buttonWorks);   // not hooked up right
 
 }
 
     // functions down here!!!
 
     function buttonWorks(){
-        console.log('Submit button works!');
+        console.log('Submit button works!');  // not hooked up right
     }
