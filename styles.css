@@ -4,11 +4,18 @@ header {
 }
 h1 {
     color: #e5e5e5;
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: normal;
 }
 
 table, th, td {
     text-align: left;
     border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
   }
   
 table tr:nth-child(odd) {
@@ -21,3 +28,6 @@ table th {
   background-color: #d2d2d2;
 }
 
+input {
+    border: 1px solid black;
+}
