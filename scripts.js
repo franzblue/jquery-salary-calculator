@@ -1,7 +1,7 @@
 console.log('Hello from js');
 
 let employeeArray = [];
-// let cost = 0;
+let cost = 0;
 
 $(document).ready(onReady);
 
@@ -12,7 +12,7 @@ function onReady(){
     $('#submitButton').on('click', gatherData);
     $('#submitButton').on('click', tableFill);
     $('.deleteButton').on('click', deleteEmployee);
-    // $('#submitButton').on('click', monthlyCost);
+    $('#submitButton').on('click', monthlyCost);
 
 
 }
@@ -50,7 +50,7 @@ function onReady(){
                     <td>${employeeArray[i].lName}</td>
                     <td>${employeeArray[i].id}</td>
                     <td>${employeeArray[i].title}</td>
-                    <td>${employeeArray[i].salary}</td>
+                    <td class="salaryData">${employeeArray[i].salary}</td>
                     <td><button class="deleteButton">Delete</button></td>
                 </tr>
                 `);
@@ -63,13 +63,16 @@ function onReady(){
         console.log('Delete Employee');
     }// this works for now, reassess for stretch goal
 
-    // function monthlyCost(){
-    //     cost += $('#annualSalary').val();
-    //     console.log('Monthly cost is', cost);
-    //     $('#monthlyCost').empty();
-    //     $('#monthlyCost').append(cost);
-    //     return cost;
-    // }
+    function monthlyCost(){
+        for(i = 0; i < employeeArray.length; i++){
+            cost += Number(employeeArray[i].salary);
+        }
+        cost = cost / 12;
+        console.log('Monthly cost is', cost);
+        $('#monthlyCost').empty();
+        $('#monthlyCost').append(cost);
+        return cost;
+    }
 
     //above function is half assed, I need rest
 

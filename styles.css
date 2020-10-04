@@ -59,3 +59,9 @@ table tr:nth-child(odd) {
  if over $20k */
 
  /* need to make header larger to match wireframe */
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
