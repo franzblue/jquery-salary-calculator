@@ -39,6 +39,10 @@ table tr:nth-child(odd) {
     text-align: right;
 }
 
+.red {
+  background-color: red;
+}
+
 .salaryData {
   text-align: right;
 }
@@ -60,12 +64,14 @@ table tr:nth-child(odd) {
 
  /* need to make header larger to match wireframe */
 
+
+ /* this is to make number input scroll wheel disappear */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 }
 
-greyScale {
+/* .greyScale {
   background-color: #efefef;
-}
+} */

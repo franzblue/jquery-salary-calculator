@@ -40,9 +40,7 @@ function onReady(){
 
     function tableFill(){
         let newRow = $('#tableBody')
-
         newRow.empty();
-
         for( i = 0; i < employeeArray.length; i++){
             newRow.append(`
                 <tr>
@@ -67,10 +65,13 @@ function onReady(){
         for(i = 0; i < employeeArray.length; i++){
             cost += Number(employeeArray[i].salary);
         }
-        cost = Math.floor(cost / 12);
+        cost = Math.ceil(cost / 12);
         console.log('Monthly cost is', cost);
         $('#monthlyCost').empty();
         $('#monthlyCost').append(cost);
+        if(cost > 20000){
+            $('#budget').toggleClass('red');
+        }
         return cost;
     }
 
@@ -85,6 +86,11 @@ function onReady(){
     // for( i = 0; i < employeeArray.length; i++)
 
     // function changeColor(){
-    //     if(employeeArray.length % 2 == 0){
-    //         $(this).parent().toggleClass('greyScale');
+    //     if(Number(employeeArray.length) % 2 == 0){
+    //         $('#foot').toggleClass('greyScale');
     //     }
+    // }
+
+    // function toggleColor(){
+    //     $(this).parent().toggleClass('greyScale');
+    // }
