@@ -21,6 +21,7 @@ function onReady(){
 
     function gatherData(){
         let employee = {};
+
         employee.fName = $('#firstName').val();
         employee.lName = $('#lastName').val();
         employee.id = $('#idNumber').val();
@@ -28,6 +29,13 @@ function onReady(){
         employee.salary = $('#annualSalary').val();
         employeeArray.push(employee);
         console.log(employee);
+
+        // empty inputs
+        $('#firstName').val('');
+        $('#lastName').val('');
+        $('#idNumber').val('');
+        $('#title').val('');
+        $('#annualSalary').val('');
     }
 
     function tableFill(){
@@ -57,7 +65,9 @@ function onReady(){
 
     // function monthlyCost(){
     //     cost += $('#annualSalary').val();
-    //     console.log('Monthly cost is ', cost);
+    //     console.log('Monthly cost is', cost);
+    //     $('#monthlyCost').empty();
+    //     $('#monthlyCost').append(cost);
     //     return cost;
     // }
 

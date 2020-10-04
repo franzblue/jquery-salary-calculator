@@ -35,8 +35,12 @@ table tr:nth-child(odd) {
   background-color: #ffffff;
 }
 
-#monthlyCost {
+#budget {
     text-align: right;
+}
+
+.salaryData {
+  text-align: right;
 }
 
 /* tfoot td{
