@@ -67,15 +67,12 @@ function onReady(){
         for(i = 0; i < employeeArray.length; i++){
             cost += Number(employeeArray[i].salary);
         }
-        cost = cost / 12;
+        cost = Math.floor(cost / 12);
         console.log('Monthly cost is', cost);
         $('#monthlyCost').empty();
         $('#monthlyCost').append(cost);
         return cost;
     }
-
-    //above function is half assed, I need rest
-
 
     // append info the DOM and clear inputs
 
@@ -86,3 +83,8 @@ function onReady(){
     // delete button that removes employee from DOM
 
     // for( i = 0; i < employeeArray.length; i++)
+
+    // function changeColor(){
+    //     if(employeeArray.length % 2 == 0){
+    //         $(this).parent().toggleClass('greyScale');
+    //     }
