@@ -70,7 +70,7 @@ function onReady(){
         $('#monthlyCost').empty();
         $('#monthlyCost').append(numberWithCommas(cost));
         if(cost > 20000){
-            $('#budget').toggleClass('red');
+            $('#budget').toggleClass('red');// this will toggle back to white if another employee is entered!!
         }
         return cost;
     }
