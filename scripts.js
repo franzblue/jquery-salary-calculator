@@ -13,8 +13,6 @@ function onReady(){
     $('#submitButton').on('click', tableFill);
     $('.deleteButton').on('click', deleteEmployee);
     $('#submitButton').on('click', monthlyCost);
-
-
 }
 
     // functions down here!!!
@@ -39,7 +37,7 @@ function onReady(){
     }
 
     function tableFill(){
-        let newRow = $('#tableBody')
+        let newRow = $('#tableBody');
         newRow.empty();
         for( i = 0; i < employeeArray.length; i++){
             newRow.append(`
@@ -53,7 +51,6 @@ function onReady(){
                 </tr>
                 `);
         }
-            console.log('Lets see if this works');
     }    // above function works!
 
     function deleteEmployee(){
@@ -70,32 +67,11 @@ function onReady(){
         $('#monthlyCost').empty();
         $('#monthlyCost').append(numberWithCommas(cost));
         if(cost > 20000){
-            $('#budget').toggleClass('red');// this will toggle back to white if another employee is entered!!
+            $('#budget').addClass('red');
         }
         return cost;
     }
 
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }// got this from stackflow, seems to work :)
-
-    // append info the DOM and clear inputs   *****
-
-    // calculate monthly costs  ******
-
-    // if exceeds $20k add red background ****
-
-    // delete button that removes employee from DOM  ******
-
-    // for( i = 0; i < employeeArray.length; i++)
-
-    // function changeColor(){
-    //     if(Number(employeeArray.length) % 2 == 0){
-    //         $('#foot').toggleClass('greyScale');
-    //     }
-    // }
-
-    // function toggleColor(){
-    //     $(this).parent().toggleClass('greyScale');
-    // }
-
+    }// got this from stackoverflow, seems to work :)

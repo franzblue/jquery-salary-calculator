@@ -1,10 +1,12 @@
 header {
     background-color: #6b6b6b;
     text-align: center;
+    height: 100px;
 }
 h1 {
-    color: #e5e5e5;
-    font-weight: normal;
+  color: #e5e5e5;
+  font-weight: normal;
+  padding-top: 42px;
 }
 
 h2 {
@@ -13,6 +15,13 @@ h2 {
 
 input {
     border: 1px solid black;
+}
+
+ /* this is to make number input scroll wheel disappear */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 table, th, td {
@@ -35,6 +44,10 @@ table tr:nth-child(odd) {
   background-color: #ffffff;
 }
 
+#foot {
+  background-color: #d2d2d2;
+}
+
 #budget {
     text-align: right;
 }
@@ -47,31 +60,3 @@ table tr:nth-child(odd) {
   text-align: right;
 }
 
-/* tfoot td{
-    I need this to toggle between #efefef and #ffffff
-    depending on number of employees
-
-    can make it work depending on employeeArray.length
-
-    function changeColor(){
-    $(this).parent().toggleClass('pinkColor');
-}      ????????
-} */
-
-
-/* will need monthlyCost to have red background
- if over $20k */
-
- /* need to make header larger to match wireframe */
-
-
- /* this is to make number input scroll wheel disappear */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
-}
-
-/* .greyScale {
-  background-color: #efefef;
-} */
