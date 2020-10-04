@@ -2,7 +2,7 @@ console.log('Hello from js');
 
 let employeeArray = [];
 let _employee = {};
-let cost = 0;
+// let cost = 0;
 
 $(document).ready(onReady);
 
@@ -65,7 +65,7 @@ function onReady(){
 
     // calculate monthly costs
 
-    //if exceeds $20k add red background
+    // if exceeds $20k add red background
 
     // delete button that removes employee from DOM
 

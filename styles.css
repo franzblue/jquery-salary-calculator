@@ -46,3 +46,7 @@ table tr:nth-child(odd) {
     $(this).parent().toggleClass('pinkColor');
 }      ????????
 } */
+
+
+/* will need monthlyCost to have red background
+ if over $20k */
