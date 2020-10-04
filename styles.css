@@ -42,6 +42,8 @@ table tr:nth-child(odd) {
     I need this to toggle between #efefef and #ffffff
     depending on number of employees
 
+    can make it work depending on employeeArray.length
+
     function changeColor(){
     $(this).parent().toggleClass('pinkColor');
 }      ????????
