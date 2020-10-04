@@ -68,20 +68,24 @@ function onReady(){
         cost = Math.ceil(cost / 12);
         console.log('Monthly cost is', cost);
         $('#monthlyCost').empty();
-        $('#monthlyCost').append(cost);
+        $('#monthlyCost').append(numberWithCommas(cost));
         if(cost > 20000){
             $('#budget').toggleClass('red');
         }
         return cost;
     }
 
-    // append info the DOM and clear inputs
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }// got this from stackflow, seems to work :)
 
-    // calculate monthly costs
+    // append info the DOM and clear inputs   *****
 
-    // if exceeds $20k add red background
+    // calculate monthly costs  ******
 
-    // delete button that removes employee from DOM
+    // if exceeds $20k add red background ****
+
+    // delete button that removes employee from DOM  ******
 
     // for( i = 0; i < employeeArray.length; i++)
 
@@ -94,3 +98,4 @@ function onReady(){
     // function toggleColor(){
     //     $(this).parent().toggleClass('greyScale');
     // }
+
