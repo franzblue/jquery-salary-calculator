@@ -41,4 +41,8 @@ table tr:nth-child(odd) {
 /* tfoot td{
     I need this to toggle between #efefef and #ffffff
     depending on number of employees
+
+    function changeColor(){
+    $(this).parent().toggleClass('pinkColor');
+}      ????????
 } */
