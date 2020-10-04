@@ -1,7 +1,6 @@
 console.log('Hello from js');
 
 let employeeArray = [];
-let _employee = {};
 // let cost = 0;
 
 $(document).ready(onReady);
@@ -11,7 +10,7 @@ function onReady(){
 
     // event listeners here!!!
     $('#submitButton').on('click', gatherData);
-    // $('#submitButton').on('click', tableFill);
+    $('#submitButton').on('click', tableFill);
     // $('#submitButton').on('click', monthlyCost);
 
 
@@ -20,37 +19,37 @@ function onReady(){
     // functions down here!!!
 
     function gatherData(){
-        let _employee = {};
-        _employee.fName = $('#firstName').val();
-        _employee.lName = $('#lastName').val();
-        _employee.id = $('#idNumber').val();
-        _employee.title = $('#title').val();
-        _employee.salary = $('#annualSalary').val();
-        employeeArray.push(_employee);
-        console.log(_employee);
+        let employee = {};
+        employee.fName = $('#firstName').val();
+        employee.lName = $('#lastName').val();
+        employee.id = $('#idNumber').val();
+        employee.title = $('#title').val();
+        employee.salary = $('#annualSalary').val();
+        employeeArray.push(employee);
+        console.log(employee);
     }
 
-    // function tableFill(){
-    //     let newRow = $('#tableBody')
+    function tableFill(){
+        let newRow = $('#tableBody')
 
-    //     newRow.empty();
+        newRow.empty();
 
-    //     for( i = 0; i < employeeArray.length; i++){
-    //         newRow.append(`
-    //             <tr>
-    //                 <td>${_employee[i].fName}</td>
-    //                 <td>${_employee[i].lName}</td>
-    //                 <td>${_employee[i].id}</td>
-    //                 <td>${_employee[i].title}</td>
-    //                 <td>${_employee[i].salary}</td>
-    //                 <td><button id="deleteButton">Delete</button></td>
-    //             </tr>
-    //             `);
-    //     }
-    //         console.log('Lets see if this works');
-    // }
+        for( i = 0; i < employeeArray.length; i++){
+            newRow.append(`
+                <tr>
+                    <td>${employeeArray[i].fName}</td>
+                    <td>${employeeArray[i].lName}</td>
+                    <td>${employeeArray[i].id}</td>
+                    <td>${employeeArray[i].title}</td>
+                    <td>${employeeArray[i].salary}</td>
+                    <td><button id="deleteButton">Delete</button></td>
+                </tr>
+                `);
+        }
+            console.log('Lets see if this works');
+    }
     
-    // above function almost works
+    // above function works!
 
     // function monthlyCost(){
     //     cost += $('#annualSalary').val();

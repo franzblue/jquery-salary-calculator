@@ -24,6 +24,7 @@ table, th, td {
 
 table th {
   background-color: #d2d2d2;
+  font-weight: normal;
 }
 
 table tr:nth-child(even) {
@@ -52,3 +53,5 @@ table tr:nth-child(odd) {
 
 /* will need monthlyCost to have red background
  if over $20k */
+
+ /* need to make header larger to match wireframe */
