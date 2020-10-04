@@ -11,6 +11,7 @@ function onReady(){
     // event listeners here!!!
     $('#submitButton').on('click', gatherData);
     $('#submitButton').on('click', tableFill);
+    $('.deleteButton').on('click', deleteEmployee);
     // $('#submitButton').on('click', monthlyCost);
 
 
@@ -42,14 +43,17 @@ function onReady(){
                     <td>${employeeArray[i].id}</td>
                     <td>${employeeArray[i].title}</td>
                     <td>${employeeArray[i].salary}</td>
-                    <td><button id="deleteButton">Delete</button></td>
+                    <td><button class="deleteButton">Delete</button></td>
                 </tr>
                 `);
         }
             console.log('Lets see if this works');
-    }
-    
-    // above function works!
+    }    // above function works!
+
+    function deleteEmployee(){
+        $(this).parent().parent().remove();
+        console.log('Delete Employee');
+    }// this works for now, reassess for stretch goal
 
     // function monthlyCost(){
     //     cost += $('#annualSalary').val();
