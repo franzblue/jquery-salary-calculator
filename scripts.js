@@ -6,19 +6,14 @@ let cost = 0;
 $(document).ready(onReady);
 
 function onReady(){
-    console.log('jquery good to go');
-
     // event listeners here!!!
     $('#submitButton').on('click', gatherData);
     $('#submitButton').on('click', tableFill);
     $('#submitButton').on('click', monthlyCost);
 }
-
     // functions down here!!!
-
     function gatherData(){
         let employee = {};
-
         employee.fName = $('#firstName').val();
         employee.lName = $('#lastName').val();
         employee.id = $('#idNumber').val();
@@ -26,7 +21,6 @@ function onReady(){
         employee.salary = $('#annualSalary').val();
         employeeArray.push(employee);
         console.log(employee);
-
         // empty inputs
         $('#firstName').val('');
         $('#lastName').val('');
@@ -56,7 +50,7 @@ function onReady(){
     function deleteEmployee(){
         $(this).parent().parent().remove();
         console.log('Delete Employee');
-    }// this works for now, reassess for stretch goal
+    }
 
     function monthlyCost(){
         for(i = 0; i < employeeArray.length; i++){
