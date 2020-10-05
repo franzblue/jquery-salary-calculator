@@ -5,8 +5,6 @@ let cost = 0;
 
 $(document).ready(onReady);
 
-$(document).on('click', )
-
 function onReady(){
     console.log('jquery good to go');
 
@@ -40,7 +38,7 @@ function onReady(){
     function tableFill(){
         let newRow = $('#tableBody');
         newRow.empty();
-        for( i = 0; i < employeeArray.length; i++){
+        for(i = 0; i < employeeArray.length; i++){
             newRow.append(`
                 <tr>
                     <td>${employeeArray[i].fName}</td>
@@ -53,7 +51,7 @@ function onReady(){
                 `);
         }
         $('.deleteButton').on('click', deleteEmployee);
-    }    // above function works!
+    }
 
     function deleteEmployee(){
         $(this).parent().parent().remove();
