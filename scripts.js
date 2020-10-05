@@ -5,13 +5,14 @@ let cost = 0;
 
 $(document).ready(onReady);
 
+$(document).on('click', )
+
 function onReady(){
     console.log('jquery good to go');
 
     // event listeners here!!!
     $('#submitButton').on('click', gatherData);
     $('#submitButton').on('click', tableFill);
-    $('.deleteButton').on('click', deleteEmployee);
     $('#submitButton').on('click', monthlyCost);
 }
 
@@ -51,6 +52,7 @@ function onReady(){
                 </tr>
                 `);
         }
+        $('.deleteButton').on('click', deleteEmployee);
     }    // above function works!
 
     function deleteEmployee(){
